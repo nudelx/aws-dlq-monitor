@@ -1,0 +1,23 @@
+.ecg-container {
+  width: 150px;
+  height: 60px;
+  overflow: hidden;
+}
+
+.ecg-line {
+  width: 100%;
+  height: 100%;
+}
+
+.heartbeat-path {
+  fill: none;
+  stroke: #203d25;
+  stroke-width: 3;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+
+.dot {
+  fill: #00ff00;
+  filter: drop-shadow(0 0 6px #00ff00);
+}

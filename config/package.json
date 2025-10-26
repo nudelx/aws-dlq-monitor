@@ -1,0 +1,10 @@
+{
+  "name": "@aws-dlq-monitor/config",
+  "version": "1.0.0",
+  "description": "AWS DLQ Monitor Configuration",
+  "main": "config.js",
+  "type": "module",
+  "scripts": {
+    "start": "node config.js"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "aws-dlq-monitor",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "scanner",
+    "dashboard",
+    "config"
+  ],
+  "scripts": {
+    "scanner:start": " npm run start --workspace=@aws-dlq-monitor/scanner",
+    "dashboard:start": " npm run start --workspace=@aws-dlq-monitor/dashboard",
+    "dev": "concurrently \"npm run scanner:start\" \"npm run dashboard:start\"",
+    "ls": "node_modules/.bin/ls",
+    "deploy:config": "./bin/copy-dlq-config.sh"
+  },
+  "dependencies": {
+    "yarn_npm_ls": "^2.0.0",
+    "concurrently": "^8.2.2"
+  }
+}

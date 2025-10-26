@@ -1,0 +1,29 @@
+{
+  "name": "@aws-dlq-monitor/scanner",
+  "version": "1.0.0",
+  "description": "Node.js script to monitor AWS Dead Letter Queue statuses",
+  "main": "dlq-monitor.js",
+  "type": "module",
+  "scripts": {
+    "start": "node dlq-monitor.js --firebase",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "keywords": [
+    "aws",
+    "sqs",
+    "dlq",
+    "monitoring"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@aws-sdk/client-sqs": "^3.0.0",
+    "dotenv": "^16.0.0",
+    "firebase": "^10.7.0"
+  },
+  "devDependencies": {
+    "prettier": "^3.6.2"
+  }
+}
