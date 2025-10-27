@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import { initializeApp } from "firebase/app"
+import { initializeApp, getApps, getApp } from "firebase/app"
 import { getDatabase, ref, get, onValue } from "firebase/database"
 import { firebaseConfig } from "@aws-dlq-monitor/config/firebase-config.js"
 
@@ -12,7 +12,7 @@ export const useFirebase = () => {
 
   useEffect(() => {
     try {
-      const app = initializeApp(firebaseConfig)
+      const app = getApps().length ? getApp() : initializeApp(firebaseConfig)
       const db = getDatabase(app)
       setDatabase(db)
       console.log("✅ Firebase Realtime Database initialized")
